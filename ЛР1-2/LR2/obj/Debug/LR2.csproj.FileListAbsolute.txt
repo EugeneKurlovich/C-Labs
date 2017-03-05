@@ -1,0 +1,6 @@
+E:\Лабы ООП C#\ЛР1-2\LR2\bin\Debug\LR2.exe.config
+E:\Лабы ООП C#\ЛР1-2\LR2\bin\Debug\LR2.exe
+E:\Лабы ООП C#\ЛР1-2\LR2\bin\Debug\LR2.pdb
+E:\Лабы ООП C#\ЛР1-2\LR2\obj\Debug\LR2.csprojResolveAssemblyReference.cache
+E:\Лабы ООП C#\ЛР1-2\LR2\obj\Debug\LR2.exe
+E:\Лабы ООП C#\ЛР1-2\LR2\obj\Debug\LR2.pdb
