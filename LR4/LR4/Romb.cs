@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace LR4
 {
-    class Romb 
+    class Romb  : IComparable
     {
-       
-
         //Data        
         readonly int sidesAmount = 4; // количество сторон
         int aLength; // длина строны а
@@ -20,6 +18,19 @@ namespace LR4
         int diogonal2; // длина диогонали2
         const int diogonalsAmount = 2; // константа количество диогоналей
         static int objects; // статическая переменная (количество объектов)
+
+       
+
+        public int CompareTo( object obj)
+        {
+            if (obj == null) return 1;
+
+            Romb otherRomb = obj as Romb;
+            if (otherRomb != null)
+                return aLength.CompareTo(otherRomb.aLength);
+            else
+                throw new ArgumentException("Object is not a Romb");
+        }
 
         //Properties
         public int SidesAmount
