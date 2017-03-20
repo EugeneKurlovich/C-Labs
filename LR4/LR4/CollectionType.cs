@@ -4,13 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+ 
 namespace LR4
 {
-   
     class CollectionType <T>  where T: Romb 
     {
         Queue<T> myQueue = new Queue<T>();
+        
         public CollectionType()
             {
           
@@ -61,20 +61,17 @@ namespace LR4
                 Console.WriteLine("Исключение обработано!!!");
             }
         }
-
         public Queue<T> GetMyQueue()
         {
             return myQueue;
         }
-
-        public T this[int index = 0]
+        public T this[int index]
         {
             get
             {
                 return myQueue.ElementAt<T>(index);
             }
         }
-
         public void WTF(CollectionType<T> obj)
         {
             FileStream file1 = new FileStream("e:\\LR4.txt", FileMode.Create); //создаем файловый поток
@@ -94,7 +91,7 @@ namespace LR4
             }
 
             writer.Close(); //закрываем поток. Не закрыв поток, в файл ничего не запишется 
-        }
+        } 
         public void Print()
         {
             try

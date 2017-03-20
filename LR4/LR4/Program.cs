@@ -4,12 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace LR4
-{
-
-
+{ 
     class Program
     {
         delegate bool AmmountZ(int obj, int zerro);
@@ -48,11 +44,9 @@ namespace LR4
             collection.Print();
             collection.WTF(collection);
 
-
             int counterZerro = 0;
 
-
-            for (int i = 0; i <collection.GetMyQueue().Count(); i++)
+            for (int i = 0; i < collection.GetMyQueue().Count(); i++)
             {
 
                 if (AmmountZero(collection[i].A, 0))
@@ -76,6 +70,7 @@ namespace LR4
             StrQueue.Enqueue("bnf");
             StrQueue.Enqueue("dgfd");
 
+         
             foreach(String i in StrQueue)
             {
                 Console.WriteLine(i);
@@ -84,6 +79,15 @@ namespace LR4
             int counter = 0;
             int n = 3;
 
+            var t = (from i in StrQueue
+                     where i.Length == n
+                     select i).Count();
+
+            
+
+
+
+           
             foreach (String i in StrQueue)
             {
                 if (i.Length == n)
@@ -96,10 +100,9 @@ namespace LR4
                               orderby i.Length
                               select i;
 
+            Console.WriteLine("Сортированная очередь");
             foreach (String i in sortedUsers)
                 Console.WriteLine(i);
-
-
 
             Console.ReadKey();
         }

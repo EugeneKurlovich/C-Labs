@@ -29,7 +29,7 @@ namespace LR4
             if (otherRomb != null)
                 return aLength.CompareTo(otherRomb.aLength);
             else
-                throw new ArgumentException("Object is not a Romb");
+                throw new ArgumentException("Объект не РОМБ!");
         }
 
         //Properties
