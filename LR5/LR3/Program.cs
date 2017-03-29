@@ -10,16 +10,20 @@ namespace LR3
     {
         static void Main(string[] args)
         {
+
+            string className = "LR3.StudentZaochnik";
+            string methodName = "test";
+            Reflector.MethodF(className, methodName);
             StudentZaochnik student1 = new StudentZaochnik("Ivan", "Ivanov", "19", "0", "9");
             StudentZaochnik student2 = new StudentZaochnik("Petr", "Mikhaylov", "35", "2", "5");
 
             Reflector.AllInfoInFile<StudentZaochnik>(student2);
 
+         
 
             Turner turner1 = new Turner("Eugene", "4", "10");
             Turner turner2 = new Turner("Zhenya", "5", "20");
 
-            Reflector.AllInfoInFile<Turner>(turner2);
 
             Director event1 = new Director();
             Director event2 = new Director();

@@ -5,13 +5,25 @@ using System.IO;
 namespace LR3
 {
   public class StudentZaochnik : AbstractSluzh, InterfaceLearn, WTF
-
-    {
-       string a;
+   {
+    public  string a;
     private string Surname { set; get; }
     private string age { set; get; }
     private string Zadolzhennosti { set; get; }
     private string srBal { set; get; }
+
+
+          public string A
+            {
+            set
+            {
+                a = value;
+            }
+            get
+            {
+                return a;
+            }
+            }
 
 
         public StudentZaochnik(string N, string S, string a, string z, string sr)
@@ -21,6 +33,11 @@ namespace LR3
             this.age = a;
             this.Zadolzhennosti = z;
             this.srBal = sr;
+        }
+
+        public StudentZaochnik()
+        {
+
         }
 
         public void SrUp()
@@ -52,92 +69,97 @@ namespace LR3
         }
 
 
-        public static double operator +(StudentZaochnik obj1, StudentZaochnik obj2)
+        //public static double operator +(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double res = 0;
+        //    double rez1,rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    res = rez1 + rez2; 
+        //    return res;
+        //}
+
+        //public static double operator *(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double res = 0;
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    res = rez1 * rez2;
+        //    return res;
+        //}
+
+        //public static double operator - (StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double res = 0;
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    res = rez1 - rez2;
+        //    return res;
+        //}
+
+        //public static double operator /(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double res = 0;
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    res = rez1 / rez2;
+        //    return res;
+        //}
+
+        //public static string operator <(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    if (rez1 < rez2)
+        //        return "Первый меньше второго";
+        //    else
+        //        return "Второй меньше первого";
+        //}
+
+        //public static string operator >(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    if (rez1 > rez2)
+        //        return "Первый больше второго";
+        //    else
+        //        return "Второй больше первого";
+        //}
+
+
+        //public static string operator !=(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    if (rez1 != rez2)
+        //        return "Не равны";
+        //    else
+        //        return "Равны";
+        //}
+
+
+        //public static string operator ==(StudentZaochnik obj1, StudentZaochnik obj2)
+        //{
+        //    double rez1, rez2;
+        //    double.TryParse(obj1.getAge(), out rez1);
+        //    double.TryParse(obj2.getAge(), out rez2);
+        //    if (rez1 == rez2)
+        //        return "Равны";
+        //    else
+        //        return "Не равны";
+        //}
+
+
+         public void test()
         {
-            double res = 0;
-            double rez1,rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            res = rez1 + rez2; 
-            return res;
+            Console.WriteLine("Метод вызван!");
         }
-
-        public static double operator *(StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double res = 0;
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            res = rez1 * rez2;
-            return res;
-        }
-
-        public static double operator - (StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double res = 0;
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            res = rez1 - rez2;
-            return res;
-        }
-
-        public static double operator /(StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double res = 0;
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            res = rez1 / rez2;
-            return res;
-        }
-
-        public static string operator <(StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            if (rez1 < rez2)
-                return "Первый меньше второго";
-            else
-                return "Второй меньше первого";
-        }
-
-        public static string operator >(StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            if (rez1 > rez2)
-                return "Первый больше второго";
-            else
-                return "Второй больше первого";
-        }
-
-
-        public static string operator !=(StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            if (rez1 != rez2)
-                return "Не равны";
-            else
-                return "Равны";
-        }
-
-
-        public static string operator ==(StudentZaochnik obj1, StudentZaochnik obj2)
-        {
-            double rez1, rez2;
-            double.TryParse(obj1.getAge(), out rez1);
-            double.TryParse(obj2.getAge(), out rez2);
-            if (rez1 == rez2)
-                return "Равны";
-            else
-                return "Не равны";
-        }
-
 
         public static Tuple<string, string, string, string,string> Cortege(StudentZaochnik obj)
         {
@@ -192,6 +214,7 @@ namespace LR3
             this.srBal = result.ToString();
         }
 
+    
 
        public override  void SetInfo()
         {
