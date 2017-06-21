@@ -18,10 +18,14 @@ namespace LR3
 
             try
             {
+                object[] paramArray;
                 Type type = Type.GetType(className);
                 MethodInfo method = type.GetMethod(methodName);
                 object classinstance = Activator.CreateInstance(type);
-                method.Invoke(classinstance, null);
+                paramArray = method.GetParameters();
+          
+           
+                method.Invoke(classinstance,paramArray);
             }
             catch
             {

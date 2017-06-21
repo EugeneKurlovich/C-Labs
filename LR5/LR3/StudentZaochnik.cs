@@ -156,8 +156,12 @@ namespace LR3
         //}
 
 
-         public void test()
+         public void test(object a)
         {
+            a = 2;
+
+
+            Console.WriteLine(a);
             Console.WriteLine("Метод вызван!");
         }
 
